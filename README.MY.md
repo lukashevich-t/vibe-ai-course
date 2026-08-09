@@ -13,7 +13,7 @@ npx create-next-app@latest vibe-course --use-npm --src-dir --app
 ```
 Build a dashboard for a link shortening and tracking application. It should be built in dark mode, and split into two main sections: the sidebar and the main portion of the dashboard.
 
-The sidebar, from top to bottom should have;
+The sidebar, from top to bottom should have:
 - Account management, with their name, email and profile picture
 - Link integrations line item
 - A line divider
@@ -24,8 +24,8 @@ The sidebar, from top to bottom should have;
 - A partners link with icon, and 'new' text next to it
 - A payouts link with icon
 At the bottom
-- settings link with icon
-- Help centre link with icon
+- Settings link with icon
+- Help center link with icon
 
 A main dashboard, from top to bottom:
 - 'Links' text at the top, with a drop down
@@ -53,12 +53,14 @@ Link card layout (should be long and thin):
 Please make following changes:
 
 Sidebar:
+- Remove section with text "Shortlist" at the top
 - background color should be: #101011
 - the 'new' chip should have a background of color #1c2b1c
 - the 'new' chip should have a text color of #04c40a
 - the profile image should have rounded but not circular corners
 
 Dashboard:
+- There should be no header above link cards
 - Background color should be #090909
 - There should be no background color for any cards or containers on the main dashboard
 - Instead there should be a border of 1px #2e2e2e
@@ -66,10 +68,47 @@ Dashboard:
 - Add button for toggle sidebar to main dashboard next to 'Links' button 
 
 Link cards:
+- Should consist of three "columns":
+  - leftmost column contains favicon for link
+  - to the right of favicon, there should be section with 3 lines:
+    - shortened link with copy icon beside it
+    - actual link with creation date beside it
+    - description of link
+  - rightmost column shows mouse icon, click counter and green dot indicator of link liveness
 - Should have no background color
 - Should have border of 1px #2e2e2e
 - Remove title of the link, should only be shortened link, and the regular link
 ```
+
+```
+Make changes:
+Sidebar:
+
+- account name color should be 'white'
+- current link backkground color should be 'grey'
+- active link backkground color should be 'lightgrey'
+```
+
+```
+main part:
+- Text 'Links' should be white
+- foreground of button "Create link" should be white
+- foreground of button "Bulk actions" should be white
+- Foreground for text "Display" should be light grey
+```
+
+
+```
+make change for main part:
+- "hide sidebar" button should actually hide sidebar
+```
+
+```
+change link card:
+- foreground for shortened link should be 'light blue'
+- foreground for click counter should be 'magenta'
+```
+
 - Когда удовлетворились результатом,  стираем то, что создал ранее Cursor, скачиваем с v0.app исходники в zip-файле, и распаковываем в ту же папку.
 - запускаем `npm install`
 
