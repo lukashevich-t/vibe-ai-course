@@ -137,3 +137,30 @@ Dashboard Main:
 - Line divider
 - 'Created by adamsmith@gmail.com', with date beside
 ```
+
+- Далее автор советует посмотреть на компоненты 'dashboard' и 'link-details', понять, что в них повторяется код для сайдбара, и вынести его в отдельный компонент. Но это же придётся повторять каждый раз при импорте новой версии проекта из `v0.app`
+
+## Создание модального окна добавления ссылки
+- на v0.app создаём новый чат с промптом:
+```
+Build a modal that has an overlay that dims the background, and displays a card. If a user clicks on the background, the modal should close.
+
+Left column:
+- Breadcrumbs that says 'Links > New Link'
+- 'Destination URL' with ? icon. Input below with 'http://example.com/subdomain-here' filler text.
+- 'Short Link' with refresh icon to the far right. Input below with a dropdown on the left with 'links.sh' filled in, and 'pOg8x1e' filled in on the right side.
+- 'Tags' with ? icon. Input below with tag icon on the left side. Filler text : 'Select tags'
+- 'Conversion Tracking' with ? icon. Toggle switch to the right.
+- Line divider
+- UTM chip, Targeting chip, Expiration chip and password chip, side by side, with icons
+
+Right column:
+- x in the top right side
+- 'Folder' with ? icon. Dropdown below with #1c2b1c icon background and #04c40a icon. 'Links' filled in with dropdown arrow far right.
+- 'Description' with description box. Filler text: 'Add a short description here...'
+- line divider (should match with the other line divider)
+- Create link button with icon. Background color is #1f1f1f
+
+The two columns should have a line between them.
+background color should be: #101011.
+```
