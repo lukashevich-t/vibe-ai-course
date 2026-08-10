@@ -164,3 +164,7 @@ Right column:
 The two columns should have a line between them.
 background color should be: #101011.
 ```
+
+Далее я перенёс файл `components/dashboard/create-link-modal.tsx` из v0.app в проект и интегрировал его вручную.  
+А надо было попросить помощи у ИИ. 
+В моём случае я просил помощи из-за незнания особенностей react и его инструментария.
