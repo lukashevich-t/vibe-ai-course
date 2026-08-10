@@ -12,6 +12,7 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu"
 import { LinkCard } from "./link-card"
+import { CreateLinkModal } from "@/components/dashboard/create-link-modal"
 
 const mockLinks = [
   {
@@ -77,6 +78,7 @@ interface LinksDashboardProps {
 export function LinksDashboard({ onToggleSidebar }: LinksDashboardProps) {
   const [searchQuery, setSearchQuery] = useState("")
   const [sortBy, setSortBy] = useState("All Links")
+  const [modalOpen, setModalOpen] = useState(false)
 
   const filteredLinks = mockLinks.filter(
     (link) =>
@@ -121,12 +123,13 @@ export function LinksDashboard({ onToggleSidebar }: LinksDashboardProps) {
           <Button 
             className="gap-2 text-foreground hover:opacity-80"
             style={{ backgroundColor: "#1f1f1f" }}
+            onClick={() => { setModalOpen(true) }}
           >
             <Plus className="size-4" />
             Create Link
           </Button>
         </div>
-
+        <CreateLinkModal open={modalOpen} onClose={() => setModalOpen(false)} />
         <Separator className="my-6 bg-border" />
 
         {/* Toolbar */}
